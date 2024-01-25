@@ -1,0 +1,13 @@
+.root {
+    background-color: black;
+    display: flex;
+    justify-content: space-between  ;
+}
+
+.header{
+    color: white;
+}
+
+.highlited{
+    background-color: greenyellow;
+}
