@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <Layout>
       {restaurants.map((restaurant) => (
-        <Restaurant restaurant={restaurant} />
+        <Restaurant restaurant={restaurant} key={restaurant.id}/>
       ))}
     </Layout>
   );
