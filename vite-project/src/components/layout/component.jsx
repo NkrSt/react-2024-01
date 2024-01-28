@@ -1,11 +1,11 @@
 import { Footer } from "../footer/component";
 import { Header } from "../header/component";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <div>
-      <Header isHighlited/>
-      <div>{children}</div>
+      <Header />
+      {children}
       <Footer />
     </div>
   );

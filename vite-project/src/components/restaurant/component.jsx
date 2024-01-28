@@ -1,13 +1,14 @@
 import { Menu } from "../menu/component";
 import { Reviews } from "../reviews/component";
-import styles from "./styles.module.css"
+
 export const Restaurant = ({ restaurant }) => {
-const {id, name, menu, reviews} = restaurant
   return (
-    <div className={styles.root} key={id}>
-      <h2 className={styles.h2}>{name}</h2>
-      <Menu menu={menu} />
-      <Reviews reviews={reviews} />
+    <div>
+      <div>{restaurant.name}</div>
+      <h3>Menu</h3>
+      <Menu menu={restaurant.menu} />
+      <h3>Reviews</h3>
+      <Reviews reviews={restaurant.reviews} />
     </div>
   );
 };

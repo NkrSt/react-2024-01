@@ -1,4 +1,3 @@
-import styles from './styles.module.css'
-export const Footer = () => {
-    return <footer className={styles.root}>Footer</footer>
-}
+export const Footer = (props) => {
+  return <div>Footer</div>;
+};
