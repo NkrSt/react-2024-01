@@ -9,23 +9,11 @@ export const Dish = ({ dish, className }) => {
     <div className={classNames(styles.root, className)}>
       {dish.name}
       <div>
-        <Button
-          onClick={() => {
-            if (count < 5) setCount(count + 1);
-          }}
-          state={count === 5}
-        >
-          +
-        </Button>
-        {count}
-        <Button
-          onClick={() => {
-            if (count > 0) setCount(count - 1);
-          }}
-          state={count === 0}
-        >
-          -
-        </Button>
+        <Button onClick={() => {setCount(count + 1);}} state={count === 5}>
+          +</Button>
+          {count}
+        <Button onClick={() => {setCount(count - 1);}} state={count === 0}>
+          -</Button>
       </div>
     </div>
   );

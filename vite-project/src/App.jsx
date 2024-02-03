@@ -1,11 +1,11 @@
 import { Layout } from "./components/layout/component";
-import { Restaurants } from "./components/restaurants/component";
 import { restaurants } from "./constants/mock";
-Layout
+import { RestaurantPage } from "./pages/restaurant-page/component";
+
+
 export const App = () => {
   return (
-    <Layout >
-      <Restaurants restaurants={restaurants} />
+    <Layout>
+<RestaurantPage restaurants={restaurants}/>
     </Layout>
-  );
-};
+  )}
