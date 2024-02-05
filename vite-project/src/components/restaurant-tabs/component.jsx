@@ -6,7 +6,7 @@ export const RestaurantTabs = ({restaurants, onSelect}) => {
         {restaurants.map(({name, id}) => (
 
          <Tab title={name} onClick={() => onSelect(id)} />
-      ))}
+        ))}
     </div>
   ) 
 };

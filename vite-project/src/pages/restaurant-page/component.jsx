@@ -3,15 +3,18 @@ import { RestaurantTabs } from "../../components/restaurant-tabs/component";
 import { Restaurant } from "../../components/restaurant/component";
 import { restaurants } from "../../constants/mock";
 
- export const RestaurantPage = () => {
-    const [activeRestaurantId, setActiveRestaurantId] = useState();
-const activeRestaurant = restaurants.find(
-  ({ id }) => id === activeRestaurantId);
-    return (
-      <div>
-          <RestaurantTabs restaurants={restaurants}  onSelect={setActiveRestaurantId}  />
-  {activeRestaurant && <Restaurant restaurant={activeRestaurant}/>}
-      </div>
-    )
-  };
-  
+export const RestaurantPage = () => {
+  const [activeRestaurantId, setActiveRestaurantId] = useState();
+  const activeRestaurant = restaurants.find(
+    ({ id }) => id === activeRestaurantId
+  );
+  return (
+    <div>
+      <RestaurantTabs
+        restaurants={restaurants}
+        onSelect={setActiveRestaurantId}
+      />
+      {activeRestaurant && <Restaurant restaurant={activeRestaurant} />}
+    </div>
+  );
+};
