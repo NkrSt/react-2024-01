@@ -8,6 +8,7 @@ export const Layout = ({ children }) => {
       <Header />
       {children}
       <Footer />
-    </div>
+      <div id="modal-container"/>
+    </div>  
   );
 };

@@ -1,18 +1,15 @@
+import { useContext } from "react";
 import styles from "./styles.module.css";
 import { useReviewForm } from "./use-review-form";
+import { UserContext } from "../../contexts/user";
 
 export const ReviewForm = () => {
-  const { form, setName, setText, setRating  } = useReviewForm();
+  const { form, setText, setRating  } = useReviewForm();
+  const {user} = useContext(UserContext)
   return (
     <div className={styles.root}>
       <div className={styles.field}>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          value={form.name}
-          onChange={setName}
-        />
+{user}
       </div>
       <div className={styles.field}>
         <label htmlFor="text">Text</label>
