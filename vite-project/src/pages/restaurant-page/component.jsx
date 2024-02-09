@@ -2,6 +2,7 @@ import { useState } from "react";
 import { RestaurantTabs } from "../../components/restaurant-tabs/component";
 import { Restaurant } from "../../components/restaurant/component";
 import { restaurants } from "../../constants/mock";
+import styles from './styles.module.css'
 
 export const RestaurantPage = () => {
   const [activeRestaurantId, setActiveRestaurantId] = useState();
@@ -9,7 +10,7 @@ export const RestaurantPage = () => {
     ({ id }) => id === activeRestaurantId
   );
   return (
-    <div>
+    <div className={styles.root}>
       <RestaurantTabs
         restaurants={restaurants}
         onSelect={setActiveRestaurantId}

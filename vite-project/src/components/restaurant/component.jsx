@@ -10,7 +10,7 @@ export const Restaurant = ({ restaurant, className }) => {
   const  {user} = useContext(UserContext)
   return (  
     <div className={classNames(styles.root, className)}>
-      <div>{restaurant.name}</div>
+      <div className={styles.title}>{restaurant.name}</div>
       <h3>Menu</h3>
       <Menu menu={restaurant.menu} />
       <h3>Reviews</h3>
