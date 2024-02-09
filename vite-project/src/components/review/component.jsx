@@ -1,11 +1,15 @@
-// import { restaurants } from "../../constants/mock"
-
-import classNames from 'classnames';
+import { selectReview } from '../../redux/entities/review/selectors';
+import { selectUser } from '../../redux/entities/user/selectors';
 import styles from './styles.module.css'
+import { useSelector } from 'react-redux';
 
-export const Review = ({ review, className}) => {
+export const Review = ({id}) => {
+  const review = useSelector((state) => selectReview(state, id))
+  const user = useSelector((state) => selectUser(state, review.userId))
+  console.log(review);
   return (
-    <div className={classNames(styles.root, className)}>
+    <div className={styles.root}>
+      <div>{user.name}</div>
       <div>{review.text}</div>
     </div>
   );

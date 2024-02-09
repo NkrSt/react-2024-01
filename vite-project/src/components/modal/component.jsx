@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom';
 import styles from './styles.module.css'
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Button } from '../button/component';
 
 export const Modal = ({children, onClose}) => {
