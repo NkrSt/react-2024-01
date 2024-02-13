@@ -1,0 +1,9 @@
+.root{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    color: black;
+
+    transform: translate(-50%, -50%);
+
+}
