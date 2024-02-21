@@ -1,0 +1,1 @@
+export const selectUser = (state, id) => state.user.entities[id]

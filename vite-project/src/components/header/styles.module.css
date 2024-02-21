@@ -1,0 +1,6 @@
+.root {
+    background-color: #1e9438;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}

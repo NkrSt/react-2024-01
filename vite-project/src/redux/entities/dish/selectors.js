@@ -1,0 +1,1 @@
+export const selectDish = (state, id) => state.dish.entities[id]
